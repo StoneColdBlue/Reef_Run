@@ -43,11 +43,11 @@ public class CharacterMovement : MonoBehaviour
         alive = false;
         //restarts the game
         Invoke("DeathScreen", 2);
+        DeathScreen();
     }
 
     void DeathScreen()//a function to restarts the game 
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        
+        SceneManager.LoadScene(1);
     }
 }
