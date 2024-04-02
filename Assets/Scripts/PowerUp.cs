@@ -19,6 +19,8 @@ public class PowerUp : MonoBehaviour
             return;
         }
         //Add to Power Ups
+        PointsManager.instan.IncrementScore();
+
         //Destroy object
         Destroy(gameObject);
     }
