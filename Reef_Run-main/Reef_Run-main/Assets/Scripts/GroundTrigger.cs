@@ -8,6 +8,8 @@ public class GroundTrigger : MonoBehaviour
         groundSpwan = GameObject.FindObjectOfType<EndlessSpwan>();//triggers the tiles to spwan endlessly
         SpawnObstacles();
         SpawnPower();
+        SpawnSpeedPowerUp();
+        SpawnScorePowerUp();
     }
 
     private void OnTriggerExit(Collider other)//This is a restart to the game 
@@ -46,6 +48,30 @@ public class GroundTrigger : MonoBehaviour
         {
             //spwan obstacle
             Instantiate(obstaclePrefab2, spawnPoint.position, Quaternion.identity, transform);
+        }
+    }
+
+    public GameObject speedPrefab; 
+
+    void SpawnSpeedPowerUp()
+    {
+        int speedPowerUpSpawn = 1; 
+        for (int i = 0; i < speedPowerUpSpawn; i++)
+        {
+            GameObject speedPowerUP = Instantiate(speedPrefab, transform);
+            speedPowerUP.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
+        }
+    }
+
+    public GameObject scorePrefab; 
+
+    void SpawnScorePowerUp()
+    {
+        int scorePowerUpSpawn = 2;
+        for (int i = 0;i < scorePowerUpSpawn; i++)
+        {
+            GameObject scorePowerUp = Instantiate(scorePrefab, transform);
+            scorePowerUp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
         }
     }
 

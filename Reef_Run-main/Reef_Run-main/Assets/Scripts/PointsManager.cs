@@ -17,10 +17,18 @@ public class PointsManager : MonoBehaviour
 
     public TextMeshProUGUI deathScore;
 
+    private bool isDoubleScoreActive = false; 
+
     public void IncrementScore()
     {
-        score++;
+        int scoreIncrement = isDoubleScoreActive ? 2 : 1;
+        score += scoreIncrement;
         scoreText.text = "Score: " + score;
+    }
+
+    public void SetDoubleScore(bool doubleScore)
+    {
+        isDoubleScoreActive = doubleScore;
     }
 
     private void Awake()
