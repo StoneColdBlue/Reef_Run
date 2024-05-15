@@ -137,6 +137,8 @@ MonoBehaviour:
   obstaclePrefab1: {fileID: 1000012043944216, guid: f3eba945ea540419eb267052f0613ee1, type: 3}
   obstaclePrefab2: {fileID: 1000011761766408, guid: 9397f0cbf7e014656b3e94f3719bd044, type: 3}
   powerUpPrefab: {fileID: 8757605703256251530, guid: 4101721a42ccf954f9da2c44dd60b5c4, type: 3}
+  speedPrefab: {fileID: 1354921010091286414, guid: c7e80720ab35f4348b8c6dba8f1f6269, type: 3}
+  scorePrefab: {fileID: 1285750960455391939, guid: c786e830a9b5dbd449ee2ef610a744b7, type: 3}
 --- !u!1 &6256880381952655428
 GameObject:
   m_ObjectHideFlags: 0

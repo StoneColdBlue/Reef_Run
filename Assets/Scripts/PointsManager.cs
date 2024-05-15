@@ -20,15 +20,23 @@ public class PointsManager : MonoBehaviour
 
     public TextMeshProUGUI bossScore;
 
+    private bool isDoubleScoreActivate = false;
+
     public void IncrementScore()
     {
-        score++;
+        int scoreIncrement = isDoubleScoreActivate ? 2 : 1; 
+        score += scoreIncrement;
         scoreText.text = "Score: " + score;
     }
 
     private void Awake()
     {
         instan = this;
+    }
+    
+    public void SetDoubleScore(bool doubleScore)
+    {
+        isDoubleScoreActivate = doubleScore;
     }
     void triggBoss()
     {
