@@ -7,6 +7,7 @@ public class CharacterMovement : MonoBehaviour
     bool alive = true; // sets the charater to be alive by default 
 
     public float pace = 10; //the constant speed of the charater
+    float subPace = 1;
     public Rigidbody rb; // tis is to link to the charater
 
     float horizontalInput; //this is a variable to store the horizontal in puts
@@ -14,22 +15,20 @@ public class CharacterMovement : MonoBehaviour
 
     float verticalInput; // a variable to store the vertical input
     public float verticalMulti = 1;//this was a multiplyer but it couses the charater to jump to high
-    float multi = 0.1f * Time.deltaTime;
-    bool jump = Input.GetKey(KeyCode.Space);
 
     private void FixedUpdate()
     {
         if (!alive) return;//checks if the charater is dead or alive
-
-        Vector3 forwardMove = transform.forward * pace * Time.fixedDeltaTime; //this makes the player move forward continuesly
+        Vector3 forwardMove = transform.forward * pace * Time.fixedDeltaTime ; //this makes the player move forward continuesly
+        Vector3 verticalMove = transform.up * verticalInput * pace * Time.fixedDeltaTime * verticalMulti;//recives vertical inputs
         Vector3 horizontalMove = transform.right * horizontalInput * pace * Time.fixedDeltaTime * horizontalMulti;//recives horizontal inputs
-        rb.MovePosition(rb.position + forwardMove + horizontalMove);//compiles all inputs to the charater
-        verticalMulti = rb.velocity.magnitude;
-        if (jump == true)
+        rb.MovePosition(rb.position + forwardMove + horizontalMove + verticalMove);//compiles all inputs to the charater
+        for (int i = 0; i < 10; i++)
         {
-            Vector3 verticalMove = transform.up * verticalInput * pace * Time.fixedDeltaTime * verticalMulti;//recives vertical inputs
-        }
+            pace = (float)(pace + 0.0001);
+        };
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -40,7 +39,7 @@ public class CharacterMovement : MonoBehaviour
         if (transform.position.y < -5)
         {
             Death();
-        }
+        };
     }
 
     public void Death()
