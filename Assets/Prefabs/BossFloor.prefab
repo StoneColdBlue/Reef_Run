@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 512585891472087568}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.036257863, y: 3, z: 4.367967}
+  m_LocalPosition: {x: 0.036257863, y: 0.03916496, z: 4.367967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -72,9 +72,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5125408520921526048}
   - component: {fileID: 8086599482016890593}
-  - component: {fileID: 6836108755834444508}
+  - component: {fileID: 5353361281788513247}
   m_Layer: 0
-  m_Name: BossFloor
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6836108755834444508
+--- !u!114 &5353361281788513247
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,12 +130,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4591229051890666444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e9e4971440de54c9b68267956b8ad8, type: 3}
+  m_Script: {fileID: 11500000, guid: 92066959fa7096c46a988d7e8fe943d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 7688723357011356432, guid: cc6204641e4b89d4e89a139b8ea622ef, type: 3}
-  obstaclePrefab1: {fileID: 0}
-  obstaclePrefab2: {fileID: 7688723357011356432, guid: cc6204641e4b89d4e89a139b8ea622ef, type: 3}
+  obstaclePrefab: {fileID: 1000013801879364, guid: 8eb71e495ef8c4c1faab07597ab6b62c, type: 3}
+  obstaclePrefab1: {fileID: 1000012043944216, guid: f3eba945ea540419eb267052f0613ee1, type: 3}
+  obstaclePrefab2: {fileID: 1000011761766408, guid: 9397f0cbf7e014656b3e94f3719bd044, type: 3}
+  speedPrefab: {fileID: 1354921010091286414, guid: c7e80720ab35f4348b8c6dba8f1f6269, type: 3}
+  scorePrefab: {fileID: 1285750960455391939, guid: c786e830a9b5dbd449ee2ef610a744b7, type: 3}
   powerUpPrefab: {fileID: 8757605703256251530, guid: 4101721a42ccf954f9da2c44dd60b5c4, type: 3}
 --- !u!1 &6256880381952655428
 GameObject:
@@ -162,7 +164,7 @@ Transform:
   m_GameObject: {fileID: 6256880381952655428}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.3637419, y: 3, z: 4.49}
+  m_LocalPosition: {x: -3.3637419, y: 0.28916496, z: 4.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -193,7 +195,7 @@ Transform:
   m_GameObject: {fileID: 7352150956782409166}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.426258, y: 3, z: 4.367967}
+  m_LocalPosition: {x: 3.426258, y: 0.03916496, z: 4.367967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -211,7 +213,6 @@ GameObject:
   - component: {fileID: 6172883479464907731}
   - component: {fileID: 1506289653845509531}
   - component: {fileID: 9038529136838960525}
-  - component: {fileID: 8592859056514178581}
   m_Layer: 0
   m_Name: ground
   m_TagString: Untagged
@@ -306,19 +307,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &8592859056514178581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8063761911288684902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e9e4971440de54c9b68267956b8ad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 0}
-  obstaclePrefab1: {fileID: 0}
-  obstaclePrefab2: {fileID: 0}
-  powerUpPrefab: {fileID: 0}
