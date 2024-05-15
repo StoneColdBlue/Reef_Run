@@ -49,6 +49,8 @@ public class GroundTrigger : MonoBehaviour
         }
     }
 
+    
+
     public GameObject powerUpPrefab;//variable to store power ups
 
     //spawn tokens for power ups but for now is a score token

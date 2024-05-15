@@ -7,7 +7,7 @@ public class CharacterMovement : MonoBehaviour
     bool alive = true; // sets the charater to be alive by default 
 
     public float pace = 10; //the constant speed of the charater
-    public Rigidbody rb; // tis is to link to the charater
+    public Rigidbody rb; // this is to link to the charater
 
     float horizontalInput; //this is a variable to store the horizontal in puts
     public float horizontalMulti = 2; // this increses the speed
