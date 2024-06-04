@@ -5,6 +5,7 @@ using UnityEngine;
 public class ScoreMultiplier : MonoBehaviour
 {
     public float duration = 10f;
+    public float trunSpeed = 90f;
 
     private bool isActivated = false;
     private PointsManager pointsManger;
@@ -41,5 +42,10 @@ public class ScoreMultiplier : MonoBehaviour
     {
         isActivated = false;
         pointsManger.SetDoubleScore(false);
+    }
+
+    void Update()
+    {
+        transform.Rotate(0, 0, trunSpeed * Time.deltaTime);
     }
 }

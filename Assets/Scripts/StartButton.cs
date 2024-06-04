@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RestartButton : MonoBehaviour
+
+public class StartButton : MonoBehaviour
 {
-    public void Restart()
+    public void StartBT ()
     {
         SceneManager.LoadScene(1);
     }

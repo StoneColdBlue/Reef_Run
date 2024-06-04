@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.24865288, g: 0.44558167, b: 0.5330963, a: 1}
+  m_IndirectSpecularColor: {r: 0.24891609, g: 0.44638222, b: 0.53353244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -791,6 +791,7 @@ MonoBehaviour:
   scoreText: {fileID: 474812831}
   value: 0
   deathScore: {fileID: 0}
+  bossScore: {fileID: 0}
 --- !u!4 &1090533920
 Transform:
   m_ObjectHideFlags: 0

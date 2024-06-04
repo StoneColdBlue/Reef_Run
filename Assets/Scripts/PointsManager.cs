@@ -42,20 +42,9 @@ public class PointsManager : MonoBehaviour
     {
         if (score == 50)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
-        else if (score == 100)
-        {
-            SceneManager.LoadScene(0);
-        }
-        else if (score == 150)
-        {
-            SceneManager.LoadScene(2);
-        }
-        else if(score == 200)
-        {
-            SceneManager.LoadScene(0);
-        }
+        
     }
 
     // Start is called before the first frame update

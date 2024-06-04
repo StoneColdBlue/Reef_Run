@@ -53,6 +53,6 @@ public class CharacterMovement : MonoBehaviour
 
     void DeathScreen()//a function to restarts the game 
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 }
