@@ -65,4 +65,28 @@ public class PointsManager : MonoBehaviour
         PlayerPrefs.SetInt("ScoreSave", score);
         triggBoss();
     }
+
+    private void OnEnable()
+    {
+        PowerUpEvents.OnScoreMultiplier.AddListener(HandleScoreMultiplier);
+        PowerUpEvents.OnPowerUpCollected.AddListener(IncrementScore); 
+    }
+
+    private void OnDisable()
+    {
+        PowerUpEvents.OnScoreMultiplier.RemoveListener(HandleScoreMultiplier);
+        PowerUpEvents.OnPowerUpCollected.RemoveListener(IncrementScore);
+    }
+
+    private void HandleScoreMultiplier(float duration)
+    {
+        StartCoroutine(ScoreMultiplierCoroutine(duration));
+    }
+
+    private IEnumerator ScoreMultiplierCoroutine(float duration)
+    {
+        isDoubleScoreActivate = true; 
+        yield return new WaitForSeconds(duration);
+        isDoubleScoreActivate = false;
+    }
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -54,5 +55,27 @@ public class CharacterMovement : MonoBehaviour
     void DeathScreen()//a function to restarts the game 
     {
         SceneManager.LoadScene(3);
+    }
+
+    private void OnEnable()
+    {
+        PowerUpEvents.OnSpeedBoost.AddListener(HandleSpeedBoost);    
+    }
+
+    private void OnDisable()
+    {
+        PowerUpEvents.OnSpeedBoost.RemoveListener(HandleSpeedBoost);
+    }
+
+    private void HandleSpeedBoost(float speedAmount, float duration)
+    {
+        StartCoroutine(SpeedBoostCoroutine(speedAmount, duration));
+    }
+
+    private IEnumerator SpeedBoostCoroutine(float speedAmount, float duration)
+    {
+        pace += speedAmount;
+        yield return new WaitForSeconds(duration);
+        pace -= speedAmount;
     }
 }
