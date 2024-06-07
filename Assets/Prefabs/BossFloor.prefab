@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 512585891472087568}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.036257863, y: 0.03916496, z: 4.367967}
+  m_LocalPosition: {x: 0.036257863, y: 1, z: 4.367967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 8086599482016890593}
   - component: {fileID: 5353361281788513247}
   m_Layer: 0
-  m_Name: Floor
+  m_Name: BossFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,12 +133,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92066959fa7096c46a988d7e8fe943d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 1000013801879364, guid: 8eb71e495ef8c4c1faab07597ab6b62c, type: 3}
-  obstaclePrefab1: {fileID: 1000012043944216, guid: f3eba945ea540419eb267052f0613ee1, type: 3}
-  obstaclePrefab2: {fileID: 1000011761766408, guid: 9397f0cbf7e014656b3e94f3719bd044, type: 3}
+  obstaclePrefab: {fileID: 7688723357011356432, guid: cc6204641e4b89d4e89a139b8ea622ef, type: 3}
+  obstaclePrefab1: {fileID: 7688723357011356432, guid: cc6204641e4b89d4e89a139b8ea622ef, type: 3}
+  obstaclePrefab2: {fileID: 7688723357011356432, guid: cc6204641e4b89d4e89a139b8ea622ef, type: 3}
+  powerUpPrefab: {fileID: 8757605703256251530, guid: 4101721a42ccf954f9da2c44dd60b5c4, type: 3}
   speedPrefab: {fileID: 1354921010091286414, guid: c7e80720ab35f4348b8c6dba8f1f6269, type: 3}
   scorePrefab: {fileID: 1285750960455391939, guid: c786e830a9b5dbd449ee2ef610a744b7, type: 3}
-  powerUpPrefab: {fileID: 8757605703256251530, guid: 4101721a42ccf954f9da2c44dd60b5c4, type: 3}
 --- !u!1 &6256880381952655428
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +164,7 @@ Transform:
   m_GameObject: {fileID: 6256880381952655428}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.3637419, y: 0.28916496, z: 4.49}
+  m_LocalPosition: {x: -3.3637419, y: 1, z: 4.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -195,7 +195,7 @@ Transform:
   m_GameObject: {fileID: 7352150956782409166}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.426258, y: 0.03916496, z: 4.367967}
+  m_LocalPosition: {x: 3.426258, y: 1, z: 4.367967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

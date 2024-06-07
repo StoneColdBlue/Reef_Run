@@ -8,6 +8,5 @@ public class ExitButton : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
-        Console.Beep();
     }
 }

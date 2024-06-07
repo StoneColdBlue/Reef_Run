@@ -22,9 +22,12 @@ public class PointsManager : MonoBehaviour
 
     private bool isDoubleScoreActivate = false;
 
+    public static int points;
+
+
     public void IncrementScore()
     {
-        int scoreIncrement = isDoubleScoreActivate ? 2 : 1; 
+        int scoreIncrement = isDoubleScoreActivate ? 2 : 1;
         score += scoreIncrement;
         scoreText.text = "Score: " + score;
     }
@@ -32,6 +35,7 @@ public class PointsManager : MonoBehaviour
     private void Awake()
     {
         instan = this;
+        points = PlayerPrefs.GetInt("Points", 0);
     }
     
     public void SetDoubleScore(bool doubleScore)
@@ -40,11 +44,11 @@ public class PointsManager : MonoBehaviour
     }
     void triggBoss()
     {
-        if (score == 50)
+        if (score >= 50)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
-        
+
     }
 
     // Start is called before the first frame update
